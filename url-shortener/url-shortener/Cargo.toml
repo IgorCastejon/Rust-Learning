@@ -1,0 +1,19 @@
+[package]
+name = "url-shortener"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = {version = "0.6.19", features = ["macros"] }
+axum-test = "11.0.0"
+serde = "1.0.176"
+serde_json = "1.0.104"
+tokio = { version = "1.29.1", features = ["full"] }
+utoipa = { features = ["axum_extras"], version = "3.4.3" }
+utoipa-swagger-ui = { features = ["axum"], version = "3.1.4" }
+url-shortener-lib = {path = "../url-shortener-lib"}
+
+[dev-dependencies]
+axum-test = "11.0.0"
